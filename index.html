@@ -25,10 +25,16 @@
           ></textarea>
         </div>
         <div class="card-footer">
-          <button id="generate" class="btn">Generate Password</button>
+          <div id="alert">
+            <div class="message"></div>
+            <button class="yes">Yes</button> <!--Window buttons-->
+            <button class="no">No</button>
+         </div>
+         <button id="generate" class="btn" onclick = 'popup();'>Generate Password</button>    <!--Button with onclick that opens a window-->
         </div>
       </div>
     </div>
     <script src="script.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> <!--Link to jquery library-->
   </body>
 </html>
