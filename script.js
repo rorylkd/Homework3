@@ -1,23 +1,3 @@
-// Assignment Code
-// var generateBtn = document.querySelector("#generate");
-
-// Write password to the #password input
-//function writePassword() {
-//  var password = generatePassword();
-//  var passwordText = document.querySelector("#password");
-
-//  passwordText.value = password;
-
-// }
-
-// Add event listener to generate button
-// generateBtn.addEventListener("click", writePassword);
-
-var lower = -1;
-var upper = -1;
-var num = -1;
-var spec = -1;
-
 function makeAWindow(msg, yeah, nah) {              // Function for popup box with yes/no options
   var window = $("#alert");
   window.find(".message").text(msg);
@@ -50,85 +30,93 @@ makeAWindow("Would you like to include lowercase characters?",
                 function yes() {makeAWindow("Would you like to include uppercase characters?", 
                                             function yes() {makeAWindow("Would you like to include numeric characters?",
                                                                         function yes() {makeAWindow("Would you like to include special characters?",
-                                                                                        function yes() {
+                                                                                        function yes() {if ((length >= 8) && (length <= 128))
                                                                                           alert(randomizer(length, 'aA#!'))
+                                                                                          else (alert("Please pick a length between 8 & 128"))
                                                                                                          },
-                                                                                        function no() {
+                                                                                        function no() {if ((length >= 8) && (length <= 128))
                                                                                           alert(randomizer(length, 'aA#'))
-                                                                                        }
+                                                                                          else (alert("Please pick a length between 8 & 128"))
+                                                                                                         }
                                                                                         )},
                                                                         function no() {makeAWindow("Would you like to include special characters?",
-                                                                                        function yes() {
+                                                                                        function yes() {if ((length >= 8) && (length <= 128))
                                                                                           alert(randomizer(length, 'aA!'))
-                                                                                        },
-                                                                                        function no() {
+                                                                                          else (alert("Please pick a length between 8 & 128"))
+                                                                                                         },
+                                                                                        function no() {if ((length >= 8) && (length <= 128))
                                                                                           alert(randomizer(length, 'aA'))
-                                                                                        }
+                                                                                          else (alert("Please pick a length between 8 & 128"))
+                                                                                                         }
                                                                                         )}
                                                                         )},
                                             function no() {makeAWindow("Would you like to include numeric characters?",
                                                                         function yes() {makeAWindow("Would you like to include special characters?",
-                                                                                        function yes() {
+                                                                                        function yes() {if ((length >= 8) && (length <= 128))
                                                                                           alert(randomizer(length, 'a#!'))
-                                                                                        },
-                                                                                        function no() {
+                                                                                          else (alert("Please pick a length between 8 & 128"))
+                                                                                                         },
+                                                                                        function no() {if ((length >= 8) && (length <= 128))
                                                                                           alert(randomizer(length, 'a#'))
-                                                                                        }
+                                                                                          else (alert("Please pick a length between 8 & 128"))
+                                                                                                         }
                                                                         )},
                                                                         function no() {makeAWindow("Would you like to include special characters?",
-                                                                                        function yes() {
+                                                                                        function yes() {if ((length >= 8) && (length <= 128))
                                                                                           alert(randomizer(length, 'a!'))
-                                                                                        },
-                                                                                        function no() {
+                                                                                          else (alert("Please pick a length between 8 & 128"))
+                                                                                                         },
+                                                                                        function no() {if ((length >= 8) && (length <= 128))
                                                                                           alert(randomizer(length, 'a'))
-                                                                                        }
+                                                                                          else (alert("Please pick a length between 8 & 128"))
+                                                                                                         }
                                                                         )}
                                                                         )} 
                                                                         )},
                 function no() {makeAWindow("Would you like to include uppercase characters?", 
                                             function yes() {makeAWindow("Would you like to include numeric characters?",
                                                                         function yes() {makeAWindow("Would you like to include special characters?",
-                                                                                        function yes() {
+                                                                                        function yes() {if ((length >= 8) && (length <= 128))
                                                                                           alert(randomizer(length, 'A#!'))
-                                                                                        },
-                                                                                        function no() {
+                                                                                          else (alert("Please pick a length between 8 & 128"))
+                                                                                                         },
+                                                                                        function no() {if ((length >= 8) && (length <= 128))
                                                                                           alert(randomizer(length, 'A#'))
-                                                                                        }
+                                                                                          else (alert("Please pick a length between 8 & 128"))
+                                                                                                         }
                                                                         )},
                                                                         function no() {makeAWindow("Would you like to include special characters?",
-                                                                                        function yes() {
+                                                                                        function yes() {if ((length >= 8) && (length <= 128))
                                                                                           alert(randomizer(length, 'A!'))
-                                                                                        },
-                                                                                        function no() {
+                                                                                          else (alert("Please pick a length between 8 & 128"))
+                                                                                                         },
+                                                                                        function no() {if ((length >= 8) && (length <= 128))
                                                                                           alert(randomizer(length, 'A'))
-                                                                                        }
+                                                                                          else (alert("Please pick a length between 8 & 128"))
+                                                                                                         }
                                                                         )}
                                                                         )},
                                             function no() {makeAWindow("Would you like to include numeric characters?",
                                                                         function yes() {makeAWindow("Would you like to include special characters?",
-                                                                                        function yes() {
+                                                                                        function yes() {if ((length >= 8) && (length <= 128))
                                                                                           alert(randomizer(length, '#!'))
-                                                                                        },
-                                                                                        function no() {
+                                                                                          else (alert("Please pick a length between 8 & 128"))
+                                                                                                         },
+                                                                                        function no() {if ((length >= 8) && (length <= 128))
                                                                                           alert(randomizer(length, '#'))
-                                                                                        }
+                                                                                          else (alert("Please pick a length between 8 & 128"))
+                                                                                                         }
                                                                         )},
                                                                         function no() {makeAWindow("Would you like to include special characters?",
-                                                                                        function yes() {
+                                                                                        function yes() {if ((length >= 8) && (length <= 128))
                                                                                           alert(randomizer(length, '!'))
-                                                                                        },
+                                                                                          else (alert("Please pick a length between 8 & 128"))
+                                                                                                         },
                                                                                         function no() {
-                                                                                          alert("Error: password generator needs at least one charset")
+                                                                                          alert("Error: Password generator needs at least one charset.")
                                                                                         }
                                                                         )}
                                                                         )} 
                                                                         )},
    );
    }
-
-   
-
- // alert(randomizer(16, 'aA#!'));  // Just for testing
-
-
-
