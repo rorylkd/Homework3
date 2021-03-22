@@ -27,25 +27,68 @@ function makeAWindow(msg, yeah, nah) {              // Function for popup box wi
 
 }
 
-function popup () {             // Should create a window for each item in the array...but doesn't :(
-  var criteria = ["Would you like to include lowercase characters?", "Would you like to include uppercase characters?", "Would you like to include numeric characters?", "Would you like to include special characters?"];  
-    for (var i = 0; i < criteria.length; i++){
-   makeAWindow(criteria[i]);}
+function popup () {  // Dear reader: sorry for this nightmare function. I kept getting weird results when I tried to loop things so I wrote it all out instead. It's horrible, I know.           
+  makeAWindow("Would you like to include lowercase characters?", 
+                function yes() {makeAWindow("Would you like to include uppercase characters?", 
+                                            function yes() {makeAWindow("Would you like to include numeric characters?",
+                                                                        function yes() {makeAWindow("Would you like to include special characters?",
+                                                                                        function yes() {alert("YEAH")},
+                                                                                        function no() {alert("NAH")}
+                                                                                        )},
+                                                                        function no() {makeAWindow("Would you like to include special characters?",
+                                                                                        function yes() {alert("YUP")},
+                                                                                        function no() {alert("NOPE")}
+                                                                                        )}
+                                                                        )},
+                                            function no() {makeAWindow("Would you like to include numeric characters?",
+                                                                        function yes() {makeAWindow("Would you like to include special characters?",
+                                                                                        function yes() {alert("uhhuh")},
+                                                                                        function no() {alert("nuhnah")}
+                                                                        )},
+                                                                        function no() {makeAWindow("Would you like to include special characters?",
+                                                                                        function yes() {alert("YEEEE")},
+                                                                                        function no() {alert("NOOOOOO")}
+                                                                        )}
+                                                                        )} 
+                                                                        )},
+                function no() {makeAWindow("Would you like to include uppercase characters?", 
+                                            function yes() {makeAWindow("Would you like to include numeric characters?",
+                                                                        function yes() {makeAWindow("Would you like to include special characters?",
+                                                                                        function yes() {alert("yeep")},
+                                                                                        function no() {alert("noop")}
+                                                                        )},
+                                                                        function no() {makeAWindow("Would you like to include special characters?",
+                                                                                        function yes() {alert("oui")},
+                                                                                        function no() {alert("non")}
+                                                                        )}
+                                                                        )},
+                                            function no() {makeAWindow("Would you like to include numeric characters?",
+                                                                        function yes() {makeAWindow("Would you like to include special characters?",
+                                                                                        function yes() {alert("ja")},
+                                                                                        function no() {alert("nein")}
+                                                                        )},
+                                                                        function no() {makeAWindow("Would you like to include special characters?",
+                                                                                        function yes() {alert("na'am")},
+                                                                                        function no() {alert("laa")}
+                                                                        )}
+                                                                        )} 
+                                                                        )},
+   );
    }
 
+
    function randomizer(length, chars) {  // Pseudorandom string generator with specific chartypes. 
-    var mask = '';
-    if (chars.indexOf('a') > -1) mask += 'abcdefghijklmnopqrstuvwxyz'; //Lowercase
-    if (chars.indexOf('A') > -1) mask += 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'; // Uppercase
-    if (chars.indexOf('#') > -1) mask += '0123456789';                // Numeric
-    if (chars.indexOf('!') > -1) mask += '~`!@#$%^&*()_+-={}[]:";\'<>?,./|\\';  // Special chars.
+    var charset = '';
+    if (chars.indexOf('a') > -1) charset += 'abcdefghijklmnopqrstuvwxyz'; //Lowercase
+    if (chars.indexOf('A') > -1) charset += 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'; // Uppercase
+    if (chars.indexOf('#') > -1) charset += '0123456789';                // Numeric
+    if (chars.indexOf('!') > -1) charset += '~`!@#$%^&*()_+-={}[]:";\'<>?,./|\\';  // Special chars.
     var result = '';
-    for (var i = length; i > 0; --i) result += mask[Math.floor(Math.random() * mask.length)];
+    for (var i = length; i > 0; --i) result += charset[Math.floor(Math.random() * charset.length)];
     return result;
 }
 
-console.log(randomizer(16, 'a!'));  // Just for testing
-console.log(randomizer(2, '#aA!'));
-console.log(randomizer(100, '#!'));
+ console.log(randomizer(16, 'aA#!'));  // Just for testing
+
 
 
