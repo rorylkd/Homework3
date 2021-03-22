@@ -4,4 +4,4 @@ This is a password generator. It takes several inputs (including length and char
 
 Screenshot: ScreenshotPasswordGen.png
 
-URL of deployed application: 
+URL of deployed application: https://rorylkd.github.io/Homework3/
