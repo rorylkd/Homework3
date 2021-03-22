@@ -1,10 +1,10 @@
 *,
-*::before,
+*::before, /*Tells the browser to account for any border and padding in the values you specify*/
 *::after {
   box-sizing: border-box;
 }
 
-html,
+html, /*Sets height*/
 body,
 .wrapper {
   height: 100%;
@@ -12,25 +12,25 @@ body,
   padding: 0;
 }
 
-body {
+body { /*Background color and font*/
   font-family: sans-serif;
   background-color: #f9fbfd;
 }
 
-.wrapper {
+.wrapper { /*Adds some space at the top*/
   padding-top: 30px;
   padding-left: 20px;
   padding-right: 20px;
 }
 
-header {
+header {  /*Styling for the header*/
   text-align: center;
   padding: 20px;
   padding-top: 0px;
   color: hsl(206, 17%, 28%);
 }
 
-.card {
+.card { /*Styling for the card*/
   background-color: hsl(0, 0%, 100%);
   border-radius: 5px;
   border-width: 1px;
@@ -42,7 +42,7 @@ header {
   padding: 30px 40px;
 }
 
-.card-header::after {
+.card-header::after { /*Styling for the header*/
   content: " ";
   display: block;
   width: 100%;
@@ -50,29 +50,26 @@ header {
   height: 2px;
 }
 
-.card-body {
+.card-body { /*Styling for the card*/
   min-height: 100px;
 }
 
-.card-footer {
+.card-footer { /*centers the button*/
   text-align: center;
 }
 
-.card-footer::before {
+.card-footer::before { /*styling for the footer*/
   content: " ";
   display: block;
   width: 100%;
   background: #e7e9eb;
   height: 2px;
+  text-align: center;
 }
 
-.card-footer::after {
-  content: " ";
-  display: block;
-  clear: both;
-}
 
-.btn {
+
+.btn { /*Styling for the button*/
   border: none;
   background-color: hsl(360, 91%, 36%);
   border-radius: 25px;
@@ -88,16 +85,7 @@ header {
   cursor: pointer;
 }
 
-button[disabled] {
-  cursor: default;
-  background: #c0c7cf;
-}
-
-.float-right {
-  float: right;
-}
-
-#password {
+#password { /*Styling for the text box in the middle*/
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
@@ -118,20 +106,45 @@ button[disabled] {
   overflow: hidden;
 }
 
-@media (max-width: 690px) {
+@media (max-width: 690px) { /*Media query for the btn class*/
   .btn {
     font-size: 1rem;
     margin: 16px 0px 0px 0px;
     padding: 10px 15px;
   }
 
-  #password {
+  #password { /*Font size for the text box in the middle: equal to the font size of the HTML element*/
     font-size: 1rem;
   }
 }
 
-@media (max-width: 500px) {
+@media (max-width: 500px) { /*Media query: under a width of 500px, the font size changes to 0.8 of the font size of the HTML element*/
   .btn {
     font-size: 0.8rem;
   }
+}
+
+
+#alert {                    /*Styling for alert box*/
+  display: none;
+  background-color:white;
+  border: 1px solid #aaa;
+  position: fixed;
+  width: 250px;
+  left: 50%;
+  margin-left: -125px;
+  margin-top: -100px;
+  padding: 6px 8px 8px;
+  box-sizing: border-box;
+  text-align: center;
+}
+#alert button {                   /*Styling for alert box buttons*/
+  background-color:white;
+  display: inline-block;
+  border-radius: 5px;
+  border: 1px solid #aaa;
+  padding: 5px;
+  text-align: center;
+  width: 80px;
+  cursor: pointer;
 }
